@@ -34,3 +34,13 @@ def exercice_three(D2, M):
                 l.append(D2[column])
         food_chain_predator[D2[row]] = l
     return food_chain_predator
+
+def exercice_four(D2, M):
+    food_chain_prey = {}
+    for row in range(len(M)):
+        l = []
+        for column in range(len(M[0])):
+            if M[row][column] == '-1':
+                l.append(D2[column])
+        food_chain_prey[D2[row]] = l
+    return food_chain_prey
