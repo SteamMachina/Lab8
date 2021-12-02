@@ -30,7 +30,7 @@ def exercice_three(D2, M):
     for row in range(len(M)):
         l = []
         for column in range(len(M[0])):
-            if M[row][column] == 1:
-                l.append[D2[column]]
+            if M[row][column] == '1':
+                l.append(D2[column])
         food_chain_predator[D2[row]] = l
     return food_chain_predator
