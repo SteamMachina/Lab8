@@ -44,3 +44,14 @@ def exercice_four(D2, M):
                 l.append(D2[column])
         food_chain_prey[D2[row]] = l
     return food_chain_prey
+
+def exercice_three_bis(M, D2, elem):
+    Sep = "-->"
+    if exercice_three(D2, M)[elem] == []:
+        return elem
+    else:
+        temp = randint(0, (len(exercice_three(D2, M)[elem]) - 1))
+        print(elem, end=" ")
+        print(Sep, end=" ")
+        elem = exercice_three(D2, M)[elem][temp]
+        return exercice_three_bis(M, D2, elem)
