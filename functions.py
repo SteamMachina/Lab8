@@ -12,4 +12,16 @@ def exercice_one(): #Soizic
         D2[i] = chain_list[i]
     return D1, D2
 
-  
+  def exo2():
+    matrix = []
+    sous_list = []
+    with open("chain.txt", "r") as chain:
+        lines = chain.readlines()
+        for i in range(2, len(lines)):
+            line = lines[i][:-1]
+            line = line.split(" ")
+            for nbr in line:
+                sous_list.append(nbr)
+        matrix.append(sous_list)
+        sous_list = []
+    return matrix
