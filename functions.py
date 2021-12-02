@@ -21,7 +21,7 @@ def exo2():
             line = line.split(" ")
             sous_list = []
             for nbr in line:
-                sous_list.append(nbr)
+                sous_list.append(int(nbr))
             matrix.append(sous_list)
     return matrix
 
@@ -30,7 +30,7 @@ def exercice_three(D2, M):
     for row in range(len(M)):
         l = []
         for column in range(len(M[0])):
-            if M[row][column] == '1':
+            if M[row][column] == 1:
                 l.append(D2[column])
         food_chain_predator[D2[row]] = l
     return food_chain_predator
@@ -40,7 +40,7 @@ def exercice_four(D2, M):
     for row in range(len(M)):
         l = []
         for column in range(len(M[0])):
-            if M[row][column] == '-1':
+            if M[row][column] == -1:
                 l.append(D2[column])
         food_chain_prey[D2[row]] = l
     return food_chain_prey
