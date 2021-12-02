@@ -45,6 +45,48 @@ def exercice_four(D2, M):#Soizic
         food_chain_prey[D2[row]] = l
     return food_chain_prey
 
+def exo1(predator_list):
+    with open("chain.txt", "r") as chain:
+        content = chain.readlines()
+        animals = content[1]
+        animals = animals[:-1]
+        animals = animals.split(" ")
+        #if predator not in the list of animals, it adds it
+        if str(predator_list.key) not in animals:
+            with open("chain.txt", "w") as chain:
+                chain.write(content[0:2])
+            with open("chain.txt", "a") as chain :
+                chain.write(str(predator_list.key))
+        #updating our variables
+        content = chain.readlines()
+        animals = content[1]
+        animals = animals[:-1]
+        animals = animals.split(" ")
+    for i in predator_list.values:
+        #changes values on the horizontal line
+        with open("chain.txt", "w") as chain:
+            content = chain.readlines()
+            chain.write(content[0:2+animals.index(predator_list.key)])
+        with open("chain.txt", "a") as chain:
+            for k in range(len(animals)+1):
+                if k == animals.index(i):
+                    chain.write("1 ")
+                else:
+                    chain.write("0 ")
+        #updating our variables
+        content = chain.readlines()
+        #changes values on the vertical line
+        for j in range(animals.index(i)):
+            with open("chain.txt", "w") as chain:
+                content = chain.readlines()
+                chain.write(content[0:j])
+            with open("chain.txt", "a") as chain:
+                for k in range(len(animals)+1):
+                    if k == animals.index(i):
+                        chain.write("1 ")
+                    else:
+                        chain.write("0 ")    
+
 def exercice_three_bis(M, D2, elem):#Soizic 
     #Corresponds more too exercice 5 because "I used the strategy of my choice" to do the 3
     Sep = "-->"
