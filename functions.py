@@ -25,7 +25,7 @@ def exo2():
             matrix.append(sous_list)
     return matrix
 
-def exercice_three(D2, M):
+def exercice_three(D2, M):#Soizic
     food_chain_predator = {}
     for row in range(len(M)):
         l = []
@@ -35,7 +35,7 @@ def exercice_three(D2, M):
         food_chain_predator[D2[row]] = l
     return food_chain_predator
 
-def exercice_four(D2, M):
+def exercice_four(D2, M):#Soizic
     food_chain_prey = {}
     for row in range(len(M)):
         l = []
@@ -45,7 +45,8 @@ def exercice_four(D2, M):
         food_chain_prey[D2[row]] = l
     return food_chain_prey
 
-def exercice_three_bis(M, D2, elem):
+def exercice_three_bis(M, D2, elem):#Soizic 
+    #Corresponds more too exercice 5 because "I used the strategy of my choice" to do the 3
     Sep = "-->"
     if exercice_three(D2, M)[elem] == []:
         return elem
