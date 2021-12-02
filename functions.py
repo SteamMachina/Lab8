@@ -28,9 +28,9 @@ def exo2():
 def exercice_three(D2, M):
     food_chain_predator = {}
     for row in range(len(M)):
-        l = []#Here...   Really ?
+        l = []
         for column in range(len(M[0])):
-            if M[i][j] == 1:
-                l.append[D2[j]]
-        food_chain_predator[D2[i]] = l
+            if M[row][column] == 1:
+                l.append[D2[column]]
+        food_chain_predator[D2[row]] = l
     return food_chain_predator
