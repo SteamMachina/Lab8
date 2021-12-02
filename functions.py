@@ -25,3 +25,13 @@ def exercice_one(): #Soizic
         matrix.append(sous_list)
         sous_list = []
     return matrix
+
+def exercice_three(D2, M):
+    food_chain_predator = {}
+    for row in range(len(M)):
+        l = []#Here...   Really ?
+        for column in range(len(M[0])):
+            if M[i][j] == 1:
+                l.append[D2[j]]
+        food_chain_predator[D2[i]] = l
+    return food_chain_predator
