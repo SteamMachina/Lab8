@@ -55,3 +55,8 @@ def exercice_three_bis(M, D2, elem):
         print(Sep, end=" ")
         elem = exercice_three(D2, M)[elem][temp]
         return exercice_three_bis(M, D2, elem)
+
+def exercice_four_bis(M, D2):
+    for i in range(9):
+        elem = D2[i]
+        print(exercice_three_bis(M, D2, elem))
