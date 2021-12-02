@@ -57,7 +57,7 @@ def exercice_three_bis(M, D2, elem):#Soizic
         elem = exercice_three(D2, M)[elem][temp]
         return exercice_three_bis(M, D2, elem)
 
-def exercice_four_bis(M, D2):
+def exercice_four_bis(M, D2):#Soizic
     for i in range(9):
         elem = D2[i]
         print(exercice_three_bis(M, D2, elem))
